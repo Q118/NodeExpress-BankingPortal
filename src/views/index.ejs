@@ -8,9 +8,9 @@
             Profile
         </a>
     </div>
-    <%- include('summary'); { accounts: accounts.savings} %>
-        <%- include('summary'); { accounts: accounts.checking} %>
-            <%- include('summary'); { accounts: accounts.credit} %>
+    <%- include('summary', { accounts: accounts.savings}); %>
+        <%- include('summary', { accounts: accounts.checking}); %>
+            <%- include('summary', { accounts: accounts.credit}); %>
 
                 <hr>
                 <a href="/transfer">
