@@ -1,14 +1,20 @@
 <%- include('header'); %>
 
-<div class="container">
-    <h1><%= title %></h1>
-    <a href="/profile">
-        Profile
-    </a>
-</div>
-<hr>
-<a href="/transfer">
-    Transfer
-</a>
+    <div class="container">
+        <h1>
+            <%= title %>
+        </h1>
+        <a href="/profile">
+            Profile
+        </a>
+    </div>
+    <%- include('summary'); { accounts: accounts.savings} %>
+        <%- include('summary'); { accounts: accounts.checking} %>
+            <%- include('summary'); { accounts: accounts.credit} %>
 
-<%- include('footer'); %>
+                <hr>
+                <a href="/transfer">
+                    Transfer
+                </a>
+
+                <%- include('footer'); %>
