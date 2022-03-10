@@ -11,6 +11,9 @@ app.set('view engine', 'ejs');
 // point express to public
 app.use(express.static(path.join(__dirname, 'public')));
 
+// express middleware to handle POST data
+app.use(express.urlencoded({ extended: true }));
+
 // read the contents of the file at src/json/accounts.json
 const accountData = fs.readFileSync(path.join(__dirname, 'json/accounts.json'), 'utf8');
 const accounts = JSON.parse(accountData);
