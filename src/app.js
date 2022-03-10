@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // express middleware to handle POST data
 app.use(express.urlencoded({ extended: true }));
 
-// set up routes
+//!! set up routes for use
 app.use('/account', accountRoutes);
 app.use('/services', servicesRoutes);
 
